@@ -5,7 +5,7 @@ const submitBtn = document.querySelector('#submitBtn');
 const modalElement = document.querySelector('#modalElement');
 const username = document.querySelector('#username');
 const bigScoreOver = document.querySelector('#bigScoreOver');
-const modalElement2 =document.querySelector('#modalElement2');
+const modalElement1 =document.querySelector('#modalElement1');
 const restartGameBtn = document.querySelector('#restartGameBtn');
 const exitGameBtn = document.getElementById('exitGameBtn');
 const user = document.querySelector("#user");
@@ -116,7 +116,7 @@ function animate(){
         const endGame =dist - enemy.radius -player.radius < 1
         if(endGame){
             cancelAnimationFrame(animationId);
-            modalElement2.style.display = "flex"
+            modalElement1.style.display = "flex"
             bigScoreOver.innerHTML = 'Score: '+ score + ' points';
             let name = localStorage.getItem('user');
             if(name){
@@ -283,14 +283,14 @@ restartGameBtn.addEventListener('click', ()=>{
     init();
     animate()
     spawnEnemies();
-    modalElement2.style.display = "none";
+    modalElement1.style.display = "none";
     
 })
 
 
 exitGameBtn.addEventListener('click', ()=>{
     modalElement.style.display = "flex";
-    modalElement2.style.display = "none";
+    modalElement1.style.display = "none";
 })
 
 // Create username: 

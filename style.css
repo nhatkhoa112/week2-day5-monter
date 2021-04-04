@@ -1,16 +1,17 @@
-    body{
-        margin: 0;
-        background: black;
-    }
+body{
+    margin: 0;
+    background: black;
+}
 
 
-    #modalElement2{
-        display: none;
-    }
+#modalElement1{
+    display: none;
 
-    #modalElement .bg{
-        background: darkgray;
-    }
+}
+
+#modalElement .bg{
+    background: darkgray;
+}
 
 #modalElement input{
     margin-top: 20px;
@@ -61,7 +62,7 @@
     margin: 0 20px;
 }
 
-#modalElement2 .restartBtn{
+#modalElement1 .restartBtn{
     position: relative;
 	border-radius: 15px 0 0 15px;
 	width: 150px;
@@ -74,7 +75,7 @@
 	
 }
 
-#modalElement2 .exitBtn{
+#modalElement1 .exitBtn{
     position: relative;
 	border-radius: 0 15px 15px 0px;
 	width: 150px;
@@ -87,16 +88,16 @@
 	
 }
 
-#modalElement2 .btn{
+#modalElement1 .btn{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#modalElement2 button:hover{
+#modalElement1 button:hover{
 	background: #ff5722
 }
 
-#modalElement2{
-    display: flex;
+#modalElement1{
+    display: nonegi;
 }
