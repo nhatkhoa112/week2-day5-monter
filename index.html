@@ -1,0 +1,37 @@
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+<div class="fixed inset-0 flex items-center justify-center" id="modalElement"> 
+    <div class="bg max-w-md w-full p-8 text-center">
+        <h1 class="text-4xl font-bold">Bubble Shooter</h1>
+        <input type="text" id="username" placeholder="Username">
+        <input type="submit" id="submitBtn" value="Enter">
+    </div>
+</div>
+
+
+<div class="fixed inset-0  items-center justify-center" id="modalElement2"> 
+    <div class="bg-white max-w-md w-full p-6 text-center">
+        <h2 class="text-4xl font-bold mb-2" id= username121>Username: </h2>
+        <h2 class="text-4xl font-bold mb-4" id="bigScoreOver"></h2>
+        <div class="btn">
+            <button class="restartBtn"
+                    id="restartGameBtn">Restart Game</button>
+            <button class="exitBtn"
+                    id="exitGameBtn">Exit game</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="fixed text-white text-sm ml-2 mt-2 select-none display">
+    <div class="username">
+        <span>Username: </span>
+        <span id="user"></span>
+    </div>
+    <div class="score"><span>Score: </span><span id="scoreElement"></span></div>
+    
+</div>
+<canvas></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script><script src="./index.js"></script>

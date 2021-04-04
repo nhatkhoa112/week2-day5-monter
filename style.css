@@ -1,0 +1,102 @@
+    body{
+        margin: 0;
+        background: black;
+    }
+
+
+    #modalElement2{
+        display: none;
+    }
+
+    #modalElement .bg{
+        background: darkgray;
+    }
+
+#modalElement input{
+    margin-top: 20px;
+	position: relative;
+	display: inline-block;
+	font-size: 20px;
+	transition: .5s;
+}
+
+#modalElement input[type="text"]{
+	background: #fff;
+	width: 250px;
+	height: 30px;
+	border: none;
+	outline: none;
+	padding: 0 25px;
+	border-radius: 15px 0 0 15px;
+}
+
+#modalElement input[type="submit"]{
+	position: relative;
+	border-radius: 0 15px 15px 0;
+	width: 75px;
+	height: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;	
+	background: #ffc107;
+	color: #fff;
+	left: -5px;
+
+}
+
+#modalElement input[type="submit"]:hover{
+	background: #ff5722
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+}
+
+.username{
+    margin: 0 20px;
+}
+
+.score{
+    margin: 0 20px;
+}
+
+#modalElement2 .restartBtn{
+    position: relative;
+	border-radius: 15px 0 0 15px;
+	width: 150px;
+	height: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;	
+	background: #ffc107;
+	color: #fff;
+	
+}
+
+#modalElement2 .exitBtn{
+    position: relative;
+	border-radius: 0 15px 15px 0px;
+	width: 150px;
+	height: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;	
+	background: violet;
+	color: #fff;
+	
+}
+
+#modalElement2 .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalElement2 button:hover{
+	background: #ff5722
+}
+
+#modalElement2{
+    display: flex;
+}
