@@ -291,6 +291,7 @@ restartGameBtn.addEventListener('click', ()=>{
 exitGameBtn.addEventListener('click', ()=>{
     modalElement.style.display = "flex";
     modalElement1.style.display = "none";
+    username.value = '';
 })
 
 // Create username: 
