@@ -10,6 +10,7 @@ const restartGameBtn = document.querySelector('#restartGameBtn');
 const exitGameBtn = document.getElementById('exitGameBtn');
 const user = document.querySelector("#user");
 const username121 = document.querySelector('#username121');
+const information = document.querySelector('#information');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
 
@@ -277,6 +278,7 @@ submitBtn.addEventListener('click', ()=>{
     let value = username.value;
     user.innerHTML = value || "anonymous";
     localStorage.setItem('user', value);
+    information.style.display = "flex";
 })
 
 restartGameBtn.addEventListener('click', ()=>{
@@ -284,7 +286,7 @@ restartGameBtn.addEventListener('click', ()=>{
     animate()
     spawnEnemies();
     modalElement1.style.display = "none";
-    
+    information.style.display = "flex";
 })
 
 
@@ -292,6 +294,8 @@ exitGameBtn.addEventListener('click', ()=>{
     modalElement.style.display = "flex";
     modalElement1.style.display = "none";
     username.value = '';
+    information.style.display = "none";
+
 })
 
 // Create username: 
