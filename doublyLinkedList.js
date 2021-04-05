@@ -59,8 +59,16 @@ class DoublyLinkedList{
     shift(){
         if(!this.head) return undefined;
         if(this.length === 1){
-            this.head = 
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.head = temp.next;
+            this.head.prev = null;
+            temp.next = null;
+
         }
+        this.length--;
+        return this;
     }
 }
 
