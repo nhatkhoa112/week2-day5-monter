@@ -65,14 +65,13 @@ class DoublyLinkedList{
             this.head = temp.next;
             this.head.prev = null;
             temp.next = null;
-
         }
         this.length--;
         return this;
-    }
+    
 }
 
-let list = new DoublyLinkedList()
-list.push(1);
-list.push(2);
-console.log(list)
+// let list = new DoublyLinkedList()
+// list.push(1);
+// list.push(2);
+// console.log(list)
