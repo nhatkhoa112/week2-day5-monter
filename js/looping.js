@@ -398,29 +398,109 @@ findAverageAge = people => {
 // return an array. The array will contain persons who have jobTitle listed as 'Student'.
 // It should look like this [{}, {}, {}]
 
+
+findStudents = people => {
+
+  let p = people.filter(person => person.jobTitle === "Student");
+
+  document.getElementById("onFindStudents").innerHTML = p.map((person) => person.firstName + ' ' + person.lastName)
+};
+
+
+
+  onFindStudents = () => {
+    findStudents(people);
+  }
+
+
+
+
 // 11. Define a function findNguyens() which will take the people array as an argument and
 // return an array. The array will contain persons whose last names are Nguyen.
 // It should look like this [{}, {}]
+
+findNguyens = (people) => {
+  let p = people.filter((person) => person.lastName === "Nguyen");
+  console.log(p)
+}
+
+findNguyens(people)
+
 
 // 12. Define a function findAdults() which will take the people array as an argument and
 // return an array. The array will contain all people who's age is above 18 and above
 // It should look like this [{}, {}, {}, ...]
 
+findAdults = (people) => {
+  let t = people.filter((person) => person.age >= 18);
+  console.log(t)
+} 
+findAdults(people);
+
+
 // 13. Define a function findFavoriteColors() which will take the people array as an argument and
 // return an array. The array will contain UNIQUE colors collected from all persons.
 // It should look like this ['red', 'black', 'pink', ...]
+
+findFavoriteColors = (people) => {
+  let p = [];
+  let favColor;
+  people.forEach((person) => {
+    p = p.concat(person.favoriteColors);
+    favColor = [ ... new Set(p)]
+  })
+      console.log("favColor: ",favColor)
+
+}
+findFavoriteColors(people)
 
 // 14. Define a function findJobTitles() which will take the people array as an argument and
 // return an array. The array will contain UNIQUE jobTitles.
 // It should look like this ['CEO', 'Instructor', 'Student']
 
+findJobTitles = (people) => {
+  let p = [];
+  let jobTitles;
+  people.forEach((person) => {
+    p.push(person.jobTitle);
+    
+  })
+  jobTitles = [... new Set(p)]
+  console.log("jobTile: ", jobTitles)
+}
+
+findJobTitles(people)
+
+
 // 15. Define a function findBirthYears() which will take the people array as an argument and
 // return an array. The array will contain all years which the people were born in.
 // It should look like this ['1997', '1990', '1987', ...]
 
+findBirthYears = (people) => {
+  let p = [];
+  let birthYear;
+  let t = new Date()
+  let currentYear = t.getFullYear();
+  people.forEach((person ) => {
+    p.push(currentYear - person.age);
+  }) 
+  birthYear = [... new Set(p)];
+  console.log("birthYear: ",birthYear )
+}
+
+findBirthYears(people)
+
 // 16. Define a function sortOldToYoung() which will take the people array as an argument and
 // return an array. The array will contain all persons sorted from oldest to youngest
 // It should look like this [{}, {}, {}, ...]
+
+sortOldToYoung = (people) => {
+  let oldToYoung = people.sort((a,b) => b.age - a.age);
+  console.log("oldToYoung: ", oldToYoung);
+}
+
+sortOldToYoung(people)
+
 
 // 17. Define a function splitIntoMinorsAndAdults() which will take the people array as an argument and
 // return three arrays. The first array will have two arrays within it.
